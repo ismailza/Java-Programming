@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6364168b-cc76-4ad8-aeba-5390acd36d69" name="Changes" comment="" />
+    <list default="true" id="6364168b-cc76-4ad8-aeba-5390acd36d69" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TP1/Exercice3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP1/Exercice3/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +58,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Application.Somme">
+  <component name="RunManager">
     <configuration name="Morse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TP1.Exercice1.Morse" />
       <module name="Java-Programming" />
@@ -102,6 +105,7 @@
       <workItem from="1701164897965" duration="577000" />
       <workItem from="1701199736182" duration="29000" />
       <workItem from="1702372237328" duration="13831000" />
+      <workItem from="1702499643040" duration="892000" />
     </task>
     <servers />
   </component>

@@ -5,21 +5,22 @@ import java.util.Vector;
 
 public class Main {
     public static void main(String[] args) {
-        int choose;
+        int choice;
         Scanner sc = new Scanner(System.in);
         Bibliotheque bibliotheque = new Bibliotheque(50);
         do {
             displayMenu();
             System.out.print("=> ");
-            choose = sc.nextInt();
-            switch (choose)
+            choice = sc.nextInt();
+            sc.nextLine();
+            switch (choice)
             {
                 case 0: break;
                 case 1:
                     System.out.println(bibliotheque);
                     break;
                 case 2:
-                    addBook(bibliotheque);
+                    addBook(sc, bibliotheque);
                     break;
                 case 3:
                     System.out.println("Capacité : " + bibliotheque.capacite());
@@ -28,12 +29,14 @@ public class Main {
                     System.out.println("Nombre de livre : " + bibliotheque.size());
                     break;
                 case 5:
-                    searchBooks(bibliotheque);
+                    System.out.print("Nom de l'auteur : ");
+                    String athor = sc.nextLine();
+                    searchBooks(bibliotheque, athor);
                     break;
                 default:
                     System.out.println("Choix invalide!");
             }
-        } while (choose != 0);
+        } while (choice != 0);
         sc.close();
     }
 
@@ -47,8 +50,7 @@ public class Main {
         System.out.println("5. Chercher les livres d'un auteur.");
     }
 
-    private static void addBook(Bibliotheque bibliotheque) {
-        Scanner sc = new Scanner(System.in);
+    private static void addBook(Scanner sc, Bibliotheque bibliotheque) {
         String ISBN, title;
         int n = 0;
         byte add;
@@ -70,15 +72,10 @@ public class Main {
         price = sc.nextFloat();
         if (!bibliotheque.ajouterLivre(new Livre(ISBN, title, athors, price)))
             System.out.println("Capacité insuffisante!!");
-        sc.close();
     }
 
-    public static void searchBooks(Bibliotheque bibliotheque) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Nom de l'auteur : ");
-        String athor = sc.nextLine();
+    public static void searchBooks(Bibliotheque bibliotheque, String athor) {
         System.out.println("Les livres écrits par " + athor + " :");
         System.out.println(bibliotheque.cherche(athor));
-        sc.close();
     }
 }
