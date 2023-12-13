@@ -34,6 +34,7 @@ public class Main {
                     System.out.println("Choix invalide!");
             }
         } while (choose != 0);
+        sc.close();
     }
 
     private static void displayMenu() {
@@ -69,6 +70,7 @@ public class Main {
         price = sc.nextFloat();
         if (!bibliotheque.ajouterLivre(new Livre(ISBN, title, athors, price)))
             System.out.println("Capacité insuffisante!!");
+        sc.close();
     }
 
     public static void searchBooks(Bibliotheque bibliotheque) {
@@ -77,5 +79,6 @@ public class Main {
         String athor = sc.nextLine();
         System.out.println("Les livres écrits par " + athor + " :");
         System.out.println(bibliotheque.cherche(athor));
+        sc.close();
     }
 }

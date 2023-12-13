@@ -55,7 +55,7 @@
     ]
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Somme">
     <configuration name="Morse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TP1.Exercice1.Morse" />
       <module name="Java-Programming" />
@@ -101,7 +101,7 @@
       <workItem from="1700747506831" duration="657000" />
       <workItem from="1701164897965" duration="577000" />
       <workItem from="1701199736182" duration="29000" />
-      <workItem from="1702372237328" duration="13384000" />
+      <workItem from="1702372237328" duration="13831000" />
     </task>
     <servers />
   </component>
