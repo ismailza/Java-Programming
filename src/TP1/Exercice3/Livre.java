@@ -1,8 +1,9 @@
 package TP1.Exercice3;
 
+import java.io.Serializable;
 import java.util.Vector;
 
-public class Livre {
+public class Livre implements Serializable {
     private String ISBN;
     private String titre;
     private Vector<String> auteurs;

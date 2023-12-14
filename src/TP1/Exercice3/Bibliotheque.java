@@ -1,8 +1,9 @@
 package TP1.Exercice3;
 
+import java.io.Serializable;
 import java.util.Vector;
 
-public class Bibliotheque {
+public class Bibliotheque implements Serializable {
     private int capacite;
     Vector<Livre> livres;
 
