@@ -5,9 +5,9 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public class Main {
+    private static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         int choice;
-        Scanner sc = new Scanner(System.in);
         String filename = "bibliotheque";
         Bibliotheque bibliotheque = deserialize(filename);
         do {
@@ -22,7 +22,7 @@ public class Main {
                     System.out.println(bibliotheque);
                     break;
                 case 2:
-                    addBook(sc, bibliotheque);
+                    addBook(bibliotheque);
                     break;
                 case 3:
                     System.out.println("Capacité : " + bibliotheque.capacite());
@@ -57,7 +57,7 @@ public class Main {
         System.out.println("6. Sauvegarder la bibliotheque");
     }
 
-    private static void addBook(Scanner sc, Bibliotheque bibliotheque) {
+    private static void addBook(Bibliotheque bibliotheque) {
         String ISBN, title;
         int n = 0;
         byte add;
@@ -100,7 +100,6 @@ public class Main {
 
     public static Bibliotheque deserialize(String filename) {
         Bibliotheque bibliotheque = null;
-        Scanner sc = new Scanner(System.in);
         File file = new File(filename);
         if (!file.exists()) {
             System.out.print("Entrer la capacité de la bibliothèque : ");
