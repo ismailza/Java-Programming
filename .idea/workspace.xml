@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6364168b-cc76-4ad8-aeba-5390acd36d69" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +41,7 @@
     "Application.Main.executor": "Run",
     "Application.TP1.Exercice3.Main.executor": "Run",
     "Application.TP2.Exercice2.Main.executor": "Run",
+    "Application.TP2BIS.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -66,7 +66,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main (2)">
+  <component name="RunManager">
     <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TP2.Exercice1.Main" />
       <module name="Java-Programming" />
@@ -154,7 +154,8 @@
       <workItem from="1702372237328" duration="13831000" />
       <workItem from="1702499643040" duration="1504000" />
       <workItem from="1702501381346" duration="218000" />
-      <workItem from="1702545475860" duration="20382000" />
+      <workItem from="1702545475860" duration="20819000" />
+      <workItem from="1702667313333" duration="10498000" />
     </task>
     <servers />
   </component>
