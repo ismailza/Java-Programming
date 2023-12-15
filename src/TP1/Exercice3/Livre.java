@@ -16,6 +16,14 @@ public class Livre implements Serializable {
         this.prix = prix;
     }
 
+    public String getISBN() {
+        return ISBN;
+    }
+
+    public String getTitre() {
+        return titre;
+    }
+
     public boolean isAuteur(String auteur) {
         for (String au : auteurs) {
             if (au.toLowerCase().startsWith(auteur.toLowerCase()))

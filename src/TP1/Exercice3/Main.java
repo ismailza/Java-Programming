@@ -7,12 +7,17 @@ import java.util.Vector;
 public class Main {
     private static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        int choice;
+        int choice, search;
         String filename = "bibliotheque";
-        Bibliotheque bibliotheque = deserialize(filename);
+        BibliothequeIO bio = new BibliothequeIO(filename);
+        Bibliotheque bibliotheque;
+        File file = new File(filename);
+        if (!file.exists() || (bibliotheque = bio.deserialize()) == null) {
+            System.out.print("Entrer la capacité de la bibliothèque : ");
+            bibliotheque = new Bibliotheque(sc.nextInt());
+        }
         do {
             displayMenu();
-            System.out.print("=> ");
             choice = sc.nextInt();
             sc.nextLine();
             switch (choice) {
@@ -22,39 +27,71 @@ public class Main {
                     System.out.println(bibliotheque);
                     break;
                 case 2:
-                    addBook(bibliotheque);
-                    break;
-                case 3:
                     System.out.println("Capacité : " + bibliotheque.capacite());
                     break;
-                case 4:
+                case 3:
                     System.out.println("Nombre de livre : " + bibliotheque.size());
                     break;
+                case 4:
+                    addBook(bibliotheque);
+                    break;
                 case 5:
-                    System.out.print("Nom de l'auteur : ");
-                    String athor = sc.nextLine();
-                    searchBooks(bibliotheque, athor);
+                    do {
+                        displaySearchMenu();
+                        search = sc.nextInt();
+                        sc.nextLine();
+                        handleSearch(search, bibliotheque);
+                    } while (search != 0);
                     break;
                 case 6:
-                    serialize(filename, bibliotheque);
+                    bio.serialize(bibliotheque);
                     break;
                 default:
                     System.out.println("Choix invalide!");
             }
         } while (choice != 0);
-        serialize(filename, bibliotheque);
+        bio.serialize(bibliotheque);
         sc.close();
     }
 
     private static void displayMenu() {
         System.out.println("******************************************************");
         System.out.println("0. Arrêter le programme.");
-        System.out.println("1. Afficher les livres de la bibliothèque.");
-        System.out.println("2. Ajouter un livre.");
-        System.out.println("3. Consulter la capacité de la bibliothèque.");
-        System.out.println("4. Consulter le nombre de livres existe dans la bibliothèque.");
-        System.out.println("5. Chercher les livres d'un auteur.");
+        System.out.println("1. Afficher tous les livres.");
+        System.out.println("2. Consulter la capacité de la bibliothèque.");
+        System.out.println("3. Consulter le nombre de livres existe dans la bibliothèque.");
+        System.out.println("4. Ajouter un livre.");
+        System.out.println("5. Chercher un livre.");
         System.out.println("6. Sauvegarder la bibliotheque");
+        System.out.print("=> ");
+    }
+
+    private static void displaySearchMenu() {
+        System.out.println("******************************************************");
+        System.out.println("0. Menu principal.");
+        System.out.println("1. Chercher par ISBN");
+        System.out.println("2. Chercher par titre");
+        System.out.println("3. Chercher par auteur");
+        System.out.print("=> ");
+    }
+
+    private static void handleSearch(int choice, Bibliotheque bibliotheque) {
+        switch (choice) {
+            case 1:
+                System.out.print("ISBN : ");
+                System.out.println(bibliotheque.chercherParISBN(sc.nextLine()));
+                break;
+            case 2:
+                System.out.print("Titre : ");
+                System.out.println(bibliotheque.chercherParTitre(sc.nextLine()));
+                break;
+            case 3:
+                System.out.print("Auteur : ");
+                System.out.println(bibliotheque.chercherParAuteur(sc.nextLine()));
+                break;
+            default:
+                System.out.println("Choix incorrect!");
+        }
     }
 
     private static void addBook(Bibliotheque bibliotheque) {
@@ -79,39 +116,5 @@ public class Main {
         price = sc.nextFloat();
         if (!bibliotheque.ajouterLivre(new Livre(ISBN, title, athors, price)))
             System.out.println("Capacité insuffisante!!");
-    }
-
-    public static void searchBooks(Bibliotheque bibliotheque, String athor) {
-        System.out.println("Les livres écrits par " + athor + " :");
-        System.out.println(bibliotheque.cherche(athor));
-    }
-
-    public static void serialize(String filename, Bibliotheque bibliotheque) {
-        try {
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename));
-            oos.writeObject(bibliotheque);
-            oos.flush();
-            oos.close();
-            System.out.println("Bibliothèque sérialisée avec succès !");
-        } catch (IOException e) {
-            System.out.println("Erreur lors de la sérialisation de la bibliothèque : " + e.getMessage());
-        }
-    }
-
-    public static Bibliotheque deserialize(String filename) {
-        Bibliotheque bibliotheque = null;
-        File file = new File(filename);
-        if (!file.exists()) {
-            System.out.print("Entrer la capacité de la bibliothèque : ");
-            return new Bibliotheque(sc.nextInt());
-        }
-        try {
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filename));
-            bibliotheque = (Bibliotheque) ois.readObject();
-            ois.close();
-        } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Erreur lors de la désérialisation de la bibliothèque : " + e.getMessage());
-        }
-        return bibliotheque;
     }
 }

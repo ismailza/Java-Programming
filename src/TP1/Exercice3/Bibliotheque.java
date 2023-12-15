@@ -2,6 +2,7 @@ package TP1.Exercice3;
 
 import java.io.Serializable;
 import java.util.Vector;
+import java.util.stream.Collectors;
 
 public class Bibliotheque implements Serializable {
     private int capacite;
@@ -27,7 +28,24 @@ public class Bibliotheque implements Serializable {
         return livres.size();
     }
 
-    public Vector<Livre> cherche(String auteur) {
+    public Vector<Livre> chercherParISBN(String ISBN) {
+        Vector<Livre> livres = new Vector<>();
+        for (Livre livre : this.livres) {
+            if (livre.getISBN().startsWith(ISBN))
+                livres.add(livre);
+        }
+        return livres;
+    }
+
+    public Vector<Livre> chercherParTitre(String titre) {
+        Vector<Livre> livres = new Vector<>();
+        for (Livre livre : this.livres) {
+            if (livre.getTitre().startsWith(titre))
+                livres.add(livre);
+        }
+        return livres;
+    }
+    public Vector<Livre> chercherParAuteur(String auteur) {
         Vector<Livre> livres = new Vector<>();
         for (Livre livre : this.livres) {
             if (livre.isAuteur(auteur))
@@ -39,8 +57,7 @@ public class Bibliotheque implements Serializable {
     @Override
     public String toString() {
         return "Bibliotheque:" +
-                "\n\tcapacite: " + capacite +
-                ",\n\tlivres: " + livres
-                ;
+                "\n\tCapacité : " + capacite +
+                "\n\t" + livres.stream().map(Livre::toString).collect(Collectors.joining("\n\t"));
     }
 }
