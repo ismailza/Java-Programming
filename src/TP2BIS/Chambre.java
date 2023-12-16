@@ -24,6 +24,10 @@ public class Chambre implements Serializable {
         this.etat = etat;
     }
 
+    public int getNum() {
+        return num;
+    }
+
     public int getCategorie() {
         return categorie;
     }
@@ -32,8 +36,24 @@ public class Chambre implements Serializable {
         return capacite;
     }
 
+    public float getPrix() {
+        return prix;
+    }
+
     public char getEtat() {
         return etat;
+    }
+
+    public void setCategorie(int categorie) {
+        this.categorie = categorie;
+    }
+
+    public void setCapacite(int capacite) {
+        this.capacite = capacite;
+    }
+
+    public void setPrix(float prix) {
+        this.prix = prix;
     }
 
     public void setEtat(char etat) {
