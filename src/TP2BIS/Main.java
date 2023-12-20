@@ -11,7 +11,7 @@ public class Main {
         HotelIO hio = new HotelIO(filename);
         Hotel hotel;
         File file = new File(filename);
-        if (!file.exists() || (hotel = hio.deserialize()) == null) {
+        if (!file.exists() || (hotel = hio.loadHotel()) == null) {
             hotel = new Hotel();
         }
         do {
@@ -66,8 +66,8 @@ public class Main {
                     do {
                         displaySortMenu();
                         sort = sc.nextInt();
-                        sc.nextInt();
-                        switch (sc.nextInt()) {
+                        sc.nextLine();
+                        switch (sort) {
                             case 0:
                                 break;
                             case 1:
@@ -105,7 +105,7 @@ public class Main {
                         System.out.println("Numéro incorrect!");
                     break;
                 case 9:
-                    hio.serialize(hotel);
+                    hio.saveHotel(hotel);
                     break;
                 default:
                     System.out.println("Choix invalid!");
@@ -113,7 +113,7 @@ public class Main {
             }
         } while (choice != 0);
         sc.close();
-        hio.serialize(hotel);
+        hio.saveHotel(hotel);
     }
 
     private static int getNumFromKeyboard(Scanner sc, Hotel hotel) {

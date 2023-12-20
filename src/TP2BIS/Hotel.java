@@ -2,6 +2,7 @@ package TP2BIS;
 
 import java.io.Serializable;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Vector;
 import java.util.stream.Collectors;
@@ -34,6 +35,14 @@ public class Hotel implements Serializable {
                 System.out.println("La capacite doit etre entre 1 et 4!");
         } while (capacite < 1 || 4 < capacite);
         this.chambres.add(new Chambre(++numSeq, categorie,prix, capacite));
+    }
+
+    public void ajouterChambre(Chambre chambre) {
+        this.chambres.add(chambre);
+    }
+
+    public void setNumSeq(int numSeq) {
+        this.numSeq = numSeq;
     }
 
     public void trieParNumero() {
@@ -105,9 +114,17 @@ public class Hotel implements Serializable {
         return false;
     }
 
+    public float recetteRelle() {
+        float recette = 0;
+        for (Chambre chambre : chambres)
+            if (chambre.getEtat() == 'O')
+                recette += chambre.getPrix();
+        return recette;
+    }
+
     @Override
     public String toString() {
-        return "Hotel:" +
+        return "Seq : " + numSeq +
                 "\n\t" + chambres.stream().map(Chambre::toString).collect(Collectors.joining("\n\t"));
     }
 }
