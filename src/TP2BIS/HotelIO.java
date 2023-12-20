@@ -1,6 +1,7 @@
 package TP2BIS;
 
 import java.io.*;
+import java.util.Vector;
 
 public class HotelIO {
     private String filename;
@@ -53,6 +54,20 @@ public class HotelIO {
             System.out.println("Une erreur inattendue s'est produite : " + e.getMessage());
         }
         return hotel;
+    }
+
+    public void saveChambresCategorie(Hotel hotel, int cat, String filename) {
+        Vector<Chambre> chambresCategorie = hotel.getChambreCategorie(cat);
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
+            for (Chambre chambre : chambresCategorie) {
+                writer.write(chambre.toString());
+                writer.newLine();
+            }
+            System.out.println("Chambres de la catégorie " + cat + " sauvegardées dans " + filename);
+        } catch (IOException e) {
+            System.out.println("Erreur lors de la sauvegarde des chambres : " + e.getMessage());
+        }
     }
 
     public void serialize(Hotel hotel) {

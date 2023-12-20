@@ -1,10 +1,7 @@
 package TP2BIS;
 
 import java.io.Serializable;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.Scanner;
-import java.util.Vector;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Hotel implements Serializable {
@@ -20,7 +17,7 @@ public class Hotel implements Serializable {
     public void ajouterChambre() {
         int categorie, capacite;
         float prix;
-        System.out.print("Categorie ");
+        System.out.print("Categorie : ");
         categorie = sc.nextInt();
         do {
             System.out.print("Prix : ");
@@ -69,6 +66,14 @@ public class Hotel implements Serializable {
                 .forEach(System.out::println);
     }
 
+    public Vector<Chambre> getChambreCategorie(int cat) {
+        Vector<Chambre> chambresCategorie = new Vector<>();
+        for (Chambre chambre : chambres)
+            if (chambre.getCategorie() == cat)
+                chambresCategorie.add(chambre);
+        return chambresCategorie;
+    }
+
     public boolean modifierChambre(int num) {
         for (Chambre chambre : chambres)
             if (chambre.getNum() == num) {
@@ -112,6 +117,13 @@ public class Hotel implements Serializable {
                 return true;
             }
         return false;
+    }
+
+    public float recetteMaximaleJournalier() {
+        float recette = 0;
+        for (Chambre chambre : chambres)
+            recette += chambre.getPrix();
+        return recette;
     }
 
     public float recetteRelle() {

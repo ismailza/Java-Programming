@@ -107,9 +107,22 @@ public class Main {
                 case 9:
                     hio.saveHotel(hotel);
                     break;
+                case 10:
+                    System.out.print("Catégorie : ");
+                    int cat = sc.nextInt();
+                    sc.nextLine();
+                    System.out.print("Fichier : ");
+                    String file_seq = sc.nextLine();
+                    hio.saveChambresCategorie(hotel, cat, file_seq);
+                    break;
+                case 11:
+                    System.out.println("La recette maximale journaliere : " + hotel.recetteMaximaleJournalier());
+                    break;
+                case 12:
+                    System.out.println("La recette réelle du jour : " + hotel.recetteRelle());
+                    break;
                 default:
                     System.out.println("Choix invalid!");
-                    break;
             }
         } while (choice != 0);
         sc.close();
@@ -134,6 +147,9 @@ public class Main {
         System.out.println("7. Réserver une chambre");
         System.out.println("8. Libirer une chambre");
         System.out.println("9. Sauvegarder l'hotel");
+        System.out.println("10. Sauvegarder les chambres d'une catégorie dans un fichier séquentiel");
+        System.out.println("11. Recette maximale journalière");
+        System.out.println("12. Recette réelle du jour");
         System.out.print("=> ");
     }
 

@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6364168b-cc76-4ad8-aeba-5390acd36d69" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hotel" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TP2BIS/Chambre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP2BIS/Chambre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TP2BIS/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP2BIS/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TP2BIS/HotelIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP2BIS/HotelIO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TP2BIS/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP2BIS/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +43,7 @@
     &quot;Application.EssaiTri.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main (2).executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Somme.executor&quot;: &quot;Run&quot;,
     &quot;Application.TP1.Exercice3.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.TP2.Exercice2.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.TP2BIS.Main.executor&quot;: &quot;Run&quot;,
@@ -71,20 +72,6 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TP2.Exercice1.Main" />
-      <module name="Java-Programming" />
-      <option name="PROGRAM_PARAMETERS" value="87 1 -76.234 2 9" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TP2.Exercice1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TP2.Exercice1.Main" />
       <module name="Java-Programming" />
@@ -123,13 +110,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.Somme" />
-      <item itemvalue="Application.Main (2)" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Morse" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Morse" />
       </list>
@@ -160,7 +145,12 @@
       <workItem from="1702501381346" duration="218000" />
       <workItem from="1702545475860" duration="20819000" />
       <workItem from="1702667313333" duration="11298000" />
-      <workItem from="1702750237518" duration="6493000" />
+      <workItem from="1702750237518" duration="6764000" />
+      <workItem from="1702831347346" duration="259000" />
+      <workItem from="1702939933107" duration="1432000" />
+      <workItem from="1702973658086" duration="6038000" />
+      <workItem from="1703096557405" duration="6165000" />
+      <workItem from="1703109231062" duration="1388000" />
     </task>
     <servers />
   </component>
