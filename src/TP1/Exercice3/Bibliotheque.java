@@ -18,10 +18,7 @@ public class Bibliotheque implements Serializable {
     public boolean ajouterLivre(Livre livre) {
         if (this.size() == capacite)
             return false;
-        if (!livres.add(livre))
-            return false;
-        capacite--;
-        return true;
+        return livres.add(livre);
     }
 
     public int size() {
