@@ -27,12 +27,12 @@ public class HotelIO {
             String[] parts;
             if ((line = reader.readLine()) != null) {
                 parts = line.split(":");
-                if (parts.length == 2)
-                    hotel.setNumSeq(Integer.parseInt(parts[1].trim()));
+                if (parts.length != 2) throw new FileFormatInvalidException();
+                hotel.setNumSeq(Integer.parseInt(parts[1].trim()));
             }
             while ((line = reader.readLine()) != null) {
                 parts = line.split(",");
-                if (parts.length == 5) {
+                if (parts.length == 5) {																								
                     hotel.ajouterChambre(new Chambre(
                             Integer.parseInt(parts[0].split(":")[1].trim()),
                             Integer.parseInt(parts[1].split(":")[1].trim()),
@@ -40,10 +40,11 @@ public class HotelIO {
                             Integer.parseInt(parts[3].split(":")[1].trim()),
                             parts[4].split(":")[1].trim().charAt(0)
                     ));
-                } else
-                    System.out.println("La ligne ne contient pas les informations attendues : " + line);
+                } else throw new FileFormatInvalidException();
             }
             reader.close();
+        } catch (FileFormatInvalidException e) {
+        	e.message();
         } catch (FileNotFoundException e) {
             System.out.println("Le fichier spécifié est introuvable : " + e.getMessage());
         } catch (IOException e) {

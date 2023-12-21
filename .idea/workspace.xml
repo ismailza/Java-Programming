@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6364168b-cc76-4ad8-aeba-5390acd36d69" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TP2BIS/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP2BIS/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TP2BIS/HotelIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP2BIS/HotelIO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TP2BIS/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP2BIS/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="6364168b-cc76-4ad8-aeba-5390acd36d69" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +65,7 @@
     ]
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Somme">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TP2.Exercice1.Main" />
       <module name="Java-Programming" />
@@ -150,7 +144,7 @@
       <workItem from="1702939933107" duration="1432000" />
       <workItem from="1702973658086" duration="6038000" />
       <workItem from="1703096557405" duration="6165000" />
-      <workItem from="1703109231062" duration="1388000" />
+      <workItem from="1703109231062" duration="1498000" />
     </task>
     <servers />
   </component>
