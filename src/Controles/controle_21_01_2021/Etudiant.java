@@ -25,10 +25,14 @@ public class Etudiant {
         return notes;
     }
 
+    public Note noteMoyenne() {
+        return Note.noteMoyenne(this.getNotes());
+    }
+
     public void printResultats() {
         System.out.print(Prenom + " " + Nom);
         for (ResultatModule resultat : resultats)
             System.out.print(" " + resultat);
-        System.out.println(" Note moyenne : " + Note.noteMoyenne(this.getNotes()));
+        System.out.println(" Note moyenne : " + this.noteMoyenne());
     }
 }

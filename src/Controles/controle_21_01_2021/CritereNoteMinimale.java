@@ -8,7 +8,7 @@ public class CritereNoteMinimale implements Predicat<Etudiant> {
     }
     @Override
     public boolean test(Etudiant etudiant) {
-        Note noteMoyenne = Note.noteMoyenne(etudiant.getNotes());
+        Note noteMoyenne = etudiant.noteMoyenne();
         return !noteMoyenne.isAbsent() && NoteMinimale <= noteMoyenne.getValeur();
     }
 }
