@@ -18,15 +18,11 @@ public class Agence implements Serializable {
         this.locations = new TreeMap<>(new ClientComparator());
     }
 
-    public void ajouterVoiture(Voiture voiture) {
-        try {
-            for (Voiture v : voitures)
-                if (v.getMatricule().equals(voiture.getMatricule()))
-                    throw new MatriculeAlreadyExistException(voiture.getMatricule());
-            this.voitures.add(voiture);
-        } catch (MatriculeAlreadyExistException e) {
-            System.out.println(e.getMessage());
-        }
+    public void ajouterVoiture(Voiture voiture) throws MatriculeAlreadyExistException {
+        for (Voiture v : voitures)
+            if (v.getMatricule().equals(voiture.getMatricule()))
+                throw new MatriculeAlreadyExistException(voiture.getMatricule());
+        this.voitures.add(voiture);
     }
 
     public Voiture findVoitureByMatricule(String matricule) {
@@ -95,5 +91,9 @@ public class Agence implements Serializable {
     public void afficherLesVoitures() {
         for (Voiture voiture : voitures)
             System.out.println(voiture);
+    }
+
+    public Iterator<Voiture> lesVoitures() {
+        return voitures.iterator();
     }
 }
