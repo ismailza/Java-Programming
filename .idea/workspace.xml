@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6364168b-cc76-4ad8-aeba-5390acd36d69" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java-Programming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java-Programming.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalAgency" beforeDir="false" afterPath="$PROJECT_DIR$/CarRentalAgency" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TP3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TP3/exception/ClientNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP3/exception/ClientNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TP3/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP3/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TP3/model/Voiture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP3/model/Voiture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TP3/service/Agence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP3/service/Agence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TP3/service/AgenceIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP3/service/AgenceIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TP3/service/ClientComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP3/service/ClientComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TP3/test/AgenceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +26,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
-        <option value="Enum" />
         <option value="AnnotationType" />
+        <option value="Enum" />
+        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -51,28 +61,44 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2YY4Go0FU3zpBlOUSmKXcsAQLHy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.AddVoiture.executor&quot;: &quot;Run&quot;,
     &quot;Application.AgenceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CarRentalLandingPage.executor&quot;: &quot;Run&quot;,
     &quot;Application.Controles.controle_08_01_2019.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.Controles.controle_14_01_2014.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.Controles.controle_21_01_2021.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DrawingApp.executor&quot;: &quot;Run&quot;,
     &quot;Application.EssaiTri.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Landing.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Login.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main (2).executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PhoneBoard.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PhoneBoardApplet.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Planche.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Planche1.executor&quot;: &quot;Run&quot;,
     &quot;Application.Simulation.executor&quot;: &quot;Run&quot;,
     &quot;Application.Simulation4.executor&quot;: &quot;Run&quot;,
     &quot;Application.Somme.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StyledLoginApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SwingApp.executor&quot;: &quot;Run&quot;,
     &quot;Application.TP1.Exercice3.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.TP2.Exercice2.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.TP2BIS.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.TP3.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.TP5.Exercice1.executor&quot;: &quot;Run&quot;,
     &quot;Application.TeleMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.VoitureSearchUI.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
@@ -83,13 +109,13 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Java-Programming/src/TP4/partie4&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java Projects/Car-Rental-Office-Java-Swing&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -111,12 +137,13 @@
       <recent name="D:\Java-Programming\src\TP4\partie3" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="TP3.exception" />
       <recent name="TP4.partie2" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="TP5.Exercice1" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="TP5.Exercice1.Main" />
+    <configuration name="SwingApp" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="TP3.SwingApp" />
       <module name="Java-Programming" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -169,8 +196,41 @@
       <workItem from="1704549199372" duration="915000" />
       <workItem from="1704582225063" duration="11000" />
       <workItem from="1704743628724" duration="155000" />
-      <workItem from="1704824411963" duration="310000" />
+      <workItem from="1704824411963" duration="558000" />
+      <workItem from="1704909570203" duration="2378000" />
+      <workItem from="1704973892330" duration="17948000" />
+      <workItem from="1705073864367" duration="21032000" />
+      <workItem from="1705143410987" duration="25394000" />
+      <workItem from="1705257445245" duration="959000" />
+      <workItem from="1705261493899" duration="1026000" />
+      <workItem from="1705271896015" duration="3470000" />
+      <workItem from="1705314957139" duration="108000" />
+      <workItem from="1705336467624" duration="450000" />
+      <workItem from="1705345837661" duration="7105000" />
+      <workItem from="1705393041990" duration="5516000" />
+      <workItem from="1705521185695" duration="9784000" />
+      <workItem from="1705573977386" duration="597000" />
+      <workItem from="1706560465186" duration="2762000" />
+      <workItem from="1706621392370" duration="2031000" />
+      <workItem from="1706654917908" duration="2104000" />
     </task>
+    <task id="LOCAL-00001" summary="TP3 Car Rental Agency">
+      <option name="closed" value="true" />
+      <created>1704824796124</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704824796124</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <option name="closed" value="true" />
+      <created>1704824822207</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704824822207</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,5 +246,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="TP3 Car Rental Agency" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Java_Programming$SwingApp.ic" NAME="SwingApp Coverage Results" MODIFIED="1705152470826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>TP3.*</FILTER>
+    </SUITE>
   </component>
 </project>
