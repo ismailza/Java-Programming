@@ -2,9 +2,7 @@ package TP3;
 
 import TP3.critere.*;
 import TP3.eumeration.Civilite;
-import TP3.exception.ClientNotFoundException;
-import TP3.exception.MatriculeAlreadyExistException;
-import TP3.exception.MatriculeNotFoundException;
+import TP3.exception.*;
 import TP3.model.*;
 import TP3.service.Agence;
 import TP3.service.AgenceIO;
@@ -12,7 +10,7 @@ import TP3.service.AgenceIO;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class AppConsole {
+public class Main {
     private static final Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -59,7 +57,8 @@ public class AppConsole {
                                 throw new MatriculeNotFoundException(matricule);
                             agence.loueVoiture(client, voiture);
                             break;
-                        } catch (MatriculeNotFoundException e) {
+                        } catch (MatriculeNotFoundException | VoitureAlreadyRentedException | VoitureNotFoundException |
+                                 ClientAlreadyRentedVoitureException e) {
                             System.out.println(e.getMessage());
                         }
                     } while (true);
@@ -211,42 +210,4 @@ public class AppConsole {
             default -> null;
         };
     }
-
-    private static void setUpAgency(Agence agence) {
-        try {
-            agence.ajouterVoiture(new Voiture("123457", "Volkswagen", "Golf", 2019, 2500));
-            agence.ajouterVoiture(new Voiture("123458", "Subaru", "Outback", 2021, 2700));
-            agence.ajouterVoiture(new Voiture("123459", "Toyota", "Rav4", 2022, 3000));
-            agence.ajouterVoiture(new Voiture("123465", "Honda", "Accord", 2019, 2700));
-            agence.ajouterVoiture(new Voiture("123460", "Nissan", "Altima", 2020, 2600));
-            agence.ajouterVoiture(new Voiture("123462", "Audi", "Q5", 2020, 3200));
-            agence.ajouterVoiture(new Voiture("123456", "Mercedes-Benz", "C-Class", 2020, 2900));
-            agence.ajouterVoiture(new Voiture("123463", "Ford", "Escape", 2023, 3100));
-            agence.ajouterVoiture(new Voiture("123464", "Chevrolet", "Equinox", 2021, 2800));
-            agence.ajouterVoiture(new Voiture("123466", "BMW", "3 Series", 2022, 3300));
-            agence.ajouterVoiture(new Voiture("123467", "Hyundai", "Tucson", 2020, 2900));
-            agence.ajouterVoiture(new Voiture("123461", "Jeep", "Wrangler", 2018, 2800));
-            agence.ajouterVoiture(new Voiture("123468", "Kia", "Sportage", 2023, 2950));
-            agence.ajouterVoiture(new Voiture("123469", "Lexus", "RX", 2021, 3400));
-            agence.ajouterVoiture(new Voiture("123470", "Mazda", "CX-5", 2018, 2050));
-            agence.ajouterVoiture(new Voiture("123471", "Volvo", "XC60", 2022, 300));
-            agence.ajouterVoiture(new Voiture("123472", "Infiniti", "Q50", 2019, 2950));
-            agence.ajouterVoiture(new Voiture("123473", "Porsche", "Macan", 2021, 3800));
-            agence.ajouterVoiture(new Voiture("123474", "GMC", "Terrain", 2017, 2600));
-            agence.ajouterVoiture(new Voiture("123481", "Renault", "Captur", 2009, 99));
-            agence.ajouterVoiture(new Voiture("123476", "Lincoln", "Corsair", 2020, 3300));
-            agence.ajouterVoiture(new Voiture("123475", "Buick", "Encore", 2023, 3000));
-            agence.ajouterVoiture(new Voiture("123477", "Cadillac", "XT5", 2018, 3200));
-            agence.ajouterVoiture(new Voiture("123478", "Mitsubishi", "Outlander", 2022, 2750));
-            agence.ajouterVoiture(new Voiture("123479", "Chrysler", "Pacifica", 2019, 2900));
-            agence.ajouterVoiture(new Voiture("123480", "Land Rover", "Discovery", 2021, 3600));
-            agence.ajouterVoiture(new Voiture("123485", "Dacia", "Logan", 2016, 159));
-            agence.ajouterVoiture(new Voiture("123482", "Renault", "Megane", 2009, 100));
-            agence.ajouterVoiture(new Voiture("123483", "Renault", "Clio", 2016, 200));
-            agence.ajouterVoiture(new Voiture("123484", "Renault", "Kadjar", 2017, 220));
-        } catch (MatriculeAlreadyExistException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
 }

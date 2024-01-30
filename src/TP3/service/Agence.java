@@ -1,4 +1,4 @@
-package TP3;
+package TP3.service;
 
 import TP3.critere.Critere;
 import TP3.exception.*;
@@ -6,6 +6,7 @@ import TP3.model.*;
 
 import java.io.Serializable;
 import java.util.*;
+import java.util.Map.Entry;
 
 public class Agence implements Serializable {
     private List<Voiture> voitures;
@@ -56,20 +57,14 @@ public class Agence implements Serializable {
         return null;
     }
 
-    public void loueVoiture(Client client, Voiture voiture) {
-        try {
-            if (!this.voitures.contains(voiture))
-                throw new VoitureNotFoundException(voiture);
-            if (estLoueur(client))
-                throw new ClientAlreadyRentedVoitureException(client, this.locations.get(client));
-            if (estLoue(voiture))
-                throw new VoitureAlreadyRentedException(voiture);
-            locations.put(client, voiture);
-        } catch (VoitureNotFoundException |
-                 ClientAlreadyRentedVoitureException |
-                 VoitureAlreadyRentedException e) {
-            System.out.println(e.getMessage());
-        }
+    public void loueVoiture(Client client, Voiture voiture) throws VoitureAlreadyRentedException, VoitureNotFoundException, ClientAlreadyRentedVoitureException {
+        if (!this.voitures.contains(voiture))
+            throw new VoitureNotFoundException(voiture);
+        if (estLoueur(client))
+            throw new ClientAlreadyRentedVoitureException(client, this.locations.get(client));
+        if (estLoue(voiture))
+            throw new VoitureAlreadyRentedException(voiture);
+        locations.put(client, voiture);
     }
 
     public boolean estLoueur(Client client) {
@@ -95,5 +90,29 @@ public class Agence implements Serializable {
 
     public Iterator<Voiture> lesVoitures() {
         return voitures.iterator();
+    }
+
+    public Iterator<Client> lesClients() {
+        return clients.iterator();
+    }
+
+    public Iterator<Entry<Client, Voiture>> getLocations() {
+        return this.locations.entrySet().iterator();
+    }
+
+    public Iterator<Entry<Client, Voiture>> getLocations(String cin) {
+        ArrayList<Entry<Client, Voiture>> filteredLocations = new ArrayList<>();
+        for (Entry<Client, Voiture> entry : locations.entrySet())
+            if (entry.getKey().getCIN().toUpperCase().contains(cin.toUpperCase()))
+                filteredLocations.add(entry);
+        return filteredLocations.iterator();
+    }
+
+    public Iterator<Voiture> lesVoituresDisponibles() {
+        List<Voiture> voituresDisponibles = new ArrayList<>();
+        for (Voiture voiture : voitures)
+            if (!estLoue(voiture))
+                voituresDisponibles.add(voiture);
+        return voituresDisponibles.iterator();
     }
 }

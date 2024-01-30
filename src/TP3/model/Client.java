@@ -3,7 +3,6 @@ package TP3.model;
 import TP3.eumeration.Civilite;
 
 import java.io.Serializable;
-import java.util.Comparator;
 
 public class Client implements Serializable {
     private String nom;
@@ -20,6 +19,18 @@ public class Client implements Serializable {
 
     public String getCIN() {
         return CIN;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public Civilite getCivilite() {
+        return civilite;
     }
 
     @Override

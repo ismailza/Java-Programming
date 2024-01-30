@@ -25,19 +25,16 @@ public class Voiture implements Serializable {
         return marque;
     }
 
+    public String getModel() {
+        return model;
+    }
+
     public int getAnnee() {
         return annee;
     }
 
     public float getPrixLocation() {
         return prixLocation;
-    }
-
-    public boolean equals(Voiture voiture) {
-        return (marque.equals(voiture.marque) &&
-                model.equals(voiture.model) &&
-                annee == voiture.annee &&
-                prixLocation == voiture.prixLocation);
     }
 
     @Override
